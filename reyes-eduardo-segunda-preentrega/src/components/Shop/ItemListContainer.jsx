@@ -28,6 +28,7 @@ export default function ItemListContainer({ greeting, category }) {
                             idProd={product.id}
                             producto={product.producto}
                             categoria={product.categoria}
+                            sale={product.sale}
                             precio={product.precio}
                             imagen={product.imagen}
                             detalles={product.detalles}

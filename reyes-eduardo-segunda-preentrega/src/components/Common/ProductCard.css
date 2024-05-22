@@ -24,6 +24,12 @@
 }
 
 .product-details p {
-    font-size: 14px;
+    font-size: 1rem;
     margin-bottom: 5px;
+}
+
+.tachado {
+    text-decoration: line-through;
+    color: #ffffff;
+    font-size: 1rem;
 }

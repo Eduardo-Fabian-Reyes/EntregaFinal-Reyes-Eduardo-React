@@ -23,6 +23,7 @@ export default function ItemDetail() {
             <div className="product-details">
                 <h3>{product.producto}</h3>
                 <p>{product.detalles}</p>
+                <h5 className='tachado'>{product.sale}</h5>
                 <p>Precio: ${product.precio}</p>
                 <button>🛒</button>
             </div>

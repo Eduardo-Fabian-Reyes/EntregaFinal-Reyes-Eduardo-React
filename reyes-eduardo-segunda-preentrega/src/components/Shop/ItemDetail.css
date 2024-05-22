@@ -38,6 +38,13 @@
     font-size: 1.5rem;
 }
 
+.tachado{
+    text-decoration: line-through;
+    color: #e6e2e2;
+    font-style: normal;
+    font-weight: lighter;
+}
+
 .product-details button{
     margin-top: 1rem;
     font-size: 1.5rem;
