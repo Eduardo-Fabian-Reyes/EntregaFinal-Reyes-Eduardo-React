@@ -1,0 +1,8 @@
+.cartStyle { 
+    background-color: rgba(229, 175, 227, 0.39);
+    color: #13101C;
+    font-family: "Saira", sans-serif;
+    font-size: 1.5rem;
+    border-style: none;
+    cursor: pointer; 
+}

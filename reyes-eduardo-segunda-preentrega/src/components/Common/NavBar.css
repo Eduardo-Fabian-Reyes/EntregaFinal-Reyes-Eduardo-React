@@ -1,0 +1,19 @@
+.navContainer {
+    display: flex;
+    color: #13101C;
+    background-color: #E5AFE3;
+    font-size: 1rem;    
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navmenu {
+    display: flex;
+    gap: 5rem;
+}
+
+.navContainer img{
+    padding-left: 30px;
+    width: 12.5%;
+    height: 10%;
+}
