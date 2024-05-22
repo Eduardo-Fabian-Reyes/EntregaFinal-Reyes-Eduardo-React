@@ -1,9 +1,12 @@
 .product-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    width: 300px;
+    display: flex;
+    padding: 25px;
+    margin: 15px;
+    width: 20rem;
+    background-color: #13101C;
+    color: #FFD4FF;
+    align-items: center;
+    flex-direction: column;
 }
 
 .product-card img {

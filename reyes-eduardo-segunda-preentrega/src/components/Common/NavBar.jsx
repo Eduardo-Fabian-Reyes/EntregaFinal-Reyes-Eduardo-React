@@ -7,7 +7,7 @@ import './NavBar.css';
 export default function NavBar() {
         return (
         <header className='navContainer'>
-            <Link to={"/"}><img src={Logo} alt="" /></Link>
+            <Link className='anchor-style' to={"/"}><img src={Logo} alt="" /></Link>
             <nav className='navmenu'>
                 <Link to="/Vinilos"><ButtonComponent nombre='Vinilos' /></Link>
                 <Link to="/CDs"><ButtonComponent nombre='CDs' /></Link>

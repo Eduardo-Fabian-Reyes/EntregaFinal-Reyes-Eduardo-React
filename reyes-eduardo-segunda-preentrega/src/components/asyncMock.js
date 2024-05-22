@@ -101,7 +101,7 @@ export const getProductsStock = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(productsStock);
-        }, 2000);
+        }, 500);
     });
 };
 
@@ -110,7 +110,7 @@ export const getProduct = (id) => {
         setTimeout(() => {
             const product = productsStock.find((prod) => prod.id == id);
             resolve(product);
-        }, 2000);
+        }, 700);
     });
 };
 

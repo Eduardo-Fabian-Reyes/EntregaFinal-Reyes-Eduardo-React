@@ -17,7 +17,7 @@ export default function ItemListContainer({ greeting, category }) {
     }, [category]);
 
     return (
-        <section>
+        <section className='container-item'>
             <h1>{greeting}</h1>
             <div className="item-list-container">
                 {/* <h2></h2> */}
