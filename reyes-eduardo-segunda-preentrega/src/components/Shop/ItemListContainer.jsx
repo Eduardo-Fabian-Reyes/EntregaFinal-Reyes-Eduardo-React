@@ -1,41 +1,43 @@
 import React, { useState, useEffect } from 'react';
-import { getProductsStock } from '../asyncMock.js';
+import { useParams } from 'react-router-dom';
+import { getProducts } from '../../services/productService';
 import ProductCard from '../Common/ProductCard';
+import './ItemListContainer.css'; 
 
-
-export default function ItemListContainer({ greeting, category }) {
+const ItemListContainer = () => {
+    const { category } = useParams();
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        getProductsStock().then((data) => {
-            if (category) {
-                setProducts(data.filter(product => product.categoria === category));
-            } else {
-                setProducts(data);
+        const fetchProducts = async () => {
+            try {
+                const productList = await getProducts(category); 
+                setProducts(productList);
+            } catch (error) {
+                console.error("Error fetching products:", error);
             }
-        });
+        };
+
+        fetchProducts();
     }, [category]);
 
     return (
-        <section className='container-item'>
-            <h1>{greeting}</h1>
-            <div className="item-list-container">
-                {/* <h2></h2> */}
-                <div className="product-list">
-                    {products.map(product => (
-                        <ProductCard
-                            key={product.id}
-                            idProd={product.id}
-                            producto={product.producto}
-                            categoria={product.categoria}
-                            sale={product.sale}
-                            precio={product.precio}
-                            imagen={product.imagen}
-                            detalles={product.detalles}
-                        />
-                    ))}
-                </div>
+        <div className="item-list-container">
+            <h1>{category ? `${category}` : 'Productos'}</h1>
+            <div className="product-list">
+                {products.map((product) => (
+                    <ProductCard
+                        key={product.id}
+                        idProd={product.id}
+                        producto={product.producto}
+                        precio={product.precio}
+                        imagen={product.imagen}
+                        sale={product.sale}
+                    />
+                ))}
             </div>
-        </section>
+        </div>
     );
-}
+};
+
+export default ItemListContainer;

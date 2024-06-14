@@ -89,6 +89,7 @@ const productsStock =  [
         precio: "12.000",
         imagen: "/img/deftones-shirt.jpg",
         detalles: "Estampado hecho en Serigrafia",
+        talla: ["S", "M", "L", "XL"],
     },
     {  
         id: 12,
@@ -97,6 +98,7 @@ const productsStock =  [
         precio: "12.000",
         imagen: "/img/ghost-shirt.jpg",
         detalles: "Remera hecho en Serigrafia",
+        talla: ["S", "M", "L", "XL"],
     },
 ];
 
